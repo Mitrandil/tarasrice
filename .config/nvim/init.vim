@@ -19,6 +19,7 @@ Plug 'vimwiki/vimwiki'
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-commentary'
 Plug 'ap/vim-css-color'
+Plug 'lifepillar/vim-gruvbox8'
 call plug#end()
 
 set title
@@ -31,7 +32,7 @@ set noshowmode
 set noruler
 set laststatus=0
 set noshowcmd
-colorscheme vim
+colorscheme gruvbox8
 
 " Some basics:
 	nnoremap c "_c
@@ -41,6 +42,9 @@ colorscheme vim
 	set number relativenumber
 " Enable autocompletion:
 	set wildmode=longest,list,full
+" Enable transparent bg in gruvbox
+	let g:gruvbox_transp_bg=1
+	hi Normal ctermbg=NONE guibg=NONE
 " Disables automatic commenting on newline:
 	autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 " Perform dot commands over visual blocks:
