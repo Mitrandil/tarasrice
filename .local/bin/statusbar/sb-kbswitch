@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# Needed xkblayout-state for work
+
+icon="⌨️"
+layout="$(xkblayout-state print %s)"
+
+case $BLOCK_BUTTON in
+	1) xkblayout-state set +1 && notify-send "Layout was changed" "Layout changed to: $(xkblayout-state print %s)" ;;
+	3) notify-send "⌨  Keyboard/language module" "\- Left click to change keyboard" ;;
+esac
+
+echo "$icon$layout"
