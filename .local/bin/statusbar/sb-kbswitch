@@ -1,7 +1,5 @@
 #!/bin/sh
-
-# Needed xkblayout-state for work
-
+# requirements: xkblayout-state
 icon="⌨️"
 layout="$(xkblayout-state print %s)"
 
